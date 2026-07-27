@@ -51,10 +51,10 @@ export default function Hero2() {
   return (
     <div className={styles.hero2Container}>
       <div className={styles.bgWrapperDesktop}>
-        <Image src={bgDesktop} alt="Background" fill priority placeholder="blur" quality={90} style={{ objectFit: 'cover', objectPosition: 'center' }} />
+        <Image src={bgDesktop} alt="Background" fill priority placeholder="blur" sizes="100vw" style={{ objectFit: 'cover', objectPosition: 'center' }} />
       </div>
       <div className={styles.bgWrapperMobile}>
-        <Image src={bgMobile} alt="Background" fill priority placeholder="blur" quality={90} style={{ objectFit: 'cover', objectPosition: 'center bottom' }} />
+        <Image src={bgMobile} alt="Background" fill priority placeholder="blur" sizes="100vw" style={{ objectFit: 'cover', objectPosition: 'center bottom' }} />
       </div>
 
       <motion.header 
