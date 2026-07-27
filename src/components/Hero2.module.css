@@ -23,8 +23,6 @@
   flex-direction: column;
 }
 
-}
-
 .bgWrapperDesktop, .bgWrapperMobile {
   position: absolute;
   top: 0;
