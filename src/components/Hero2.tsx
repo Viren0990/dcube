@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import bgDesktop from "../../public/bg.jpg";
+import bgMobile from "../../public/mob_hero.jpg";
 import styles from "./Hero2.module.css";
 
 export default function Hero2() {
@@ -48,6 +50,13 @@ export default function Hero2() {
 
   return (
     <div className={styles.hero2Container}>
+      <div className={styles.bgWrapperDesktop}>
+        <Image src={bgDesktop} alt="Background" fill priority placeholder="blur" quality={90} style={{ objectFit: 'cover', objectPosition: 'center' }} />
+      </div>
+      <div className={styles.bgWrapperMobile}>
+        <Image src={bgMobile} alt="Background" fill priority placeholder="blur" quality={90} style={{ objectFit: 'cover', objectPosition: 'center bottom' }} />
+      </div>
+
       <motion.header 
         className={styles.header}
         initial={{ y: -50, opacity: 0 }}
