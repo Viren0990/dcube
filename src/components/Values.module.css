@@ -1,0 +1,270 @@
+.valuesSection {
+  background-color: #D3DCE6; /* Light grey blue fallback */
+  background-image: url('/vision_building.png');
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 48px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: #1A1F2C;
+}
+
+.bgText {
+  position: absolute;
+  top: 40px;
+  right: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bgText span {
+  font-family: var(--font-archivo-black), sans-serif;
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.leftPane {
+  flex: 1;
+  max-width: 650px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightPane {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  max-width: 600px;
+}
+
+.tabsContainer {
+  display: flex;
+  margin-bottom: 8px;
+  gap: 4px;
+}
+
+.tabBtn {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.18);
+  border: none;
+  padding: 16px 20px;
+  font-family: var(--font-archivo-black), sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.tabHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tabSub {
+  display: none; /* Hide subtitle on desktop tabs */
+}
+
+.tabNumber {
+  opacity: 0.6;
+}
+
+.tabBtn:hover {
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.tabBtn.activeTab {
+  background: #FFFFFF;
+  color: #1A1F2C;
+}
+
+.tabBtn.activeTab .tabNumber {
+  opacity: 1;
+  color: #8C98A4;
+}
+
+.contentCard {
+  background: #FFFFFF;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.cardTitle {
+  font-family: var(--font-archivo-black), sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  max-width: 300px;
+}
+
+.cardNumber {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.2rem;
+  color: #8C98A4;
+}
+
+.cardSubtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.2rem;
+  color: #1A1F2C;
+  margin-bottom: 40px;
+}
+
+.cardFooter {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 24px;
+}
+
+.cardData {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dataLabel {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1A1F2C;
+}
+
+.dataValue {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.95rem;
+  color: #64748B;
+  line-height: 1.5;
+}
+
+@media (max-width: 980px) {
+  .valuesSection {
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-image: url('/vision_building.png');
+    background-size: cover;
+    background-position: center top;
+    background-color: #D3DCE6;
+  }
+  
+  .bgText {
+    position: absolute;
+    top: 10px;
+    right: 15px; /* keep on right like desktop */
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: flex-end;
+  }
+  
+  .bgText span {
+    font-size: clamp(4rem, 18vw, 5.5rem);
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    width: 100%;
+    gap: 0;
+  }
+  
+  .leftPane {
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .tabsContainer {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .tabBtn {
+    width: 100%;
+    padding: 20px 24px;
+    background: rgba(0, 0, 0, 0.35);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: var(--font-inter), sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-transform: none;
+  }
+
+  .tabHeader {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .tabSub {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #E2E8F0;
+  }
+
+  .tabBtn.activeTab {
+    background: rgba(0, 0, 0, 0.35);
+    color: #FFFFFF;
+  }
+
+  .tabBtn.activeTab .tabNumber {
+    color: #FFFFFF;
+    opacity: 0.9;
+  }
+
+  .tabNumber {
+    font-weight: 400;
+    opacity: 0.6;
+    margin-right: 4px;
+  }
+  
+  .contentCard {
+    display: none;
+  }
+}
