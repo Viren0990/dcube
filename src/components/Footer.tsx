@@ -21,7 +21,7 @@ export default function Footer() {
             <div className={styles.col}>
               <h4>Contact</h4>
               <a href="mailto:dcubeassociate@gmail.com">dcubeassociate@gmail.com</a>
-              <a href="tel:+91860898600">+91 860898600</a>
+              <a href="tel:+918608986000">+91 8608986000</a>
               <span>Pune, Maharashtra</span>
             </div>
           </div>
